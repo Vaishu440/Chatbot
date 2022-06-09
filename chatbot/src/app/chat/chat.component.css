@@ -1,0 +1,31 @@
+.message-text-recieved {
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    border-radius: 20px 0px 20px 20px;
+    max-width: 300px;
+    font-size: small;
+}
+
+.message-container-recieved {
+    display: flex;
+    justify-content: right;
+    align-items: end;
+
+
+}
+
+.message-container-send {
+    display: flex;
+    justify-content: left;
+
+}
+
+.message-text-send {
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    border-radius: 0px 20px 20px 20px;
+    max-width: 300px;
+    font-size: small;
+}

@@ -1,0 +1,46 @@
+<div class="container  mt-5">
+    <div class="container chat-container pt-2 ">
+        <div class="row">
+            <div class="col-md-12 Chat-Header">
+                <div class="chat-header-row mt-2 text-center">
+                    <h3 class="text-center">Chat bot</h3>
+                </div>
+            </div>
+        </div>
+        <div class="contect-list mt-5 ms-0 pt-3 pb-5 " #scrollMe [scrollTop]="scrollMe.scrollHeight">
+            <div *ngFor="let obj of model">
+                <span *ngIf="obj.sender === 'chatbot'">
+                    <div class="message-container-recieved ">
+                        <div class="chat-message  d-flex pt-3">
+                            <span class="message-text-recieved"> {{obj.text}} </span>
+                        </div>
+                    </div>
+                </span>
+                <span *ngIf="obj.sender === 'user'">
+                    <div class="message-container-send ">
+                        <div class="chat-message text-start d-flex pt-3">
+                            <span class="message-text-send"> {{obj.text}} </span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="Dummy-Div">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 Chat-Bottom">
+                <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost);">
+                    <div class=" row p-2">
+                        <div class="col-10">
+                            <textarea type="text" name="question" class="form-control type-message-input"
+                                placeholder="Type message ..." rows="2" ngModel></textarea>
+                        </div>
+                        <div class="col-2 text-center">
+                            <button class="send mt-3 pt-1 pb-1 " type="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
